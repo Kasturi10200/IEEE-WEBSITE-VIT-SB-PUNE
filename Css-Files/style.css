@@ -1,0 +1,296 @@
+/* Css for Header */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Roboto+Mono:wght@500&display=swap');
+html{
+    overflow: hidden;
+}
+body{
+    position: relative;
+    overflow-x: hidden;
+    
+}
+*{
+    box-sizing: border-box;
+    padding: 0rem;
+    margin: 0rem;
+}
+header{
+    height: 100vh;
+    width: 100vw;
+   
+}
+/*video*/
+header .showcase{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 0.9;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+}
+header .showcase video{
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+   /* transform: translateX(50%);
+    transform: translateY(-50%);*/
+    overflow: hidden;
+    z-index: -1;
+    /*position: fixed;*/
+}
+/* hamburger & logo */
+header nav{
+    height: 15%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 2;
+    font-family: 'Roboto Mono', monospace;
+    color: #fff;
+    overflow: hidden;
+
+}
+header nav .logo{
+    font-size: 2rem;
+    margin-top: 0.2rem;
+    z-index:3;
+    padding-left: 2rem;
+    letter-spacing: 0.3rem;
+}
+header nav .logo p{
+    font-size: 0.5rem;
+    letter-spacing: 0.08rem;
+   /* border-bottom: 2px solid #fff;*/
+    word-spacing: 0.1rem;
+}
+header nav .hamburger{
+    
+    height: 10vh;
+    width:  5%;
+    background:transparent;
+    z-index: 3;
+    margin-top: 0.8rem;
+
+}
+header nav .hamburger .hamburger-menu{
+    position: relative;
+    height: 100%;
+    width:  100%;
+    opacity: 1;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    right: 4rem;
+    z-index: 3;
+    transition: all 0.6s ease;
+
+}
+header nav .hamburger .line{
+    position: relative;
+    height: 0.25rem;
+    width: 9vh;
+    background: #fff;
+    margin-top: 0.4rem;
+    border-radius: 2px;
+    transition: all 0.6s ease;
+    
+}
+header nav .hamburger:hover .line{
+    box-shadow: 0px 2px 10px #333;
+}
+
+header .bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0%;
+    top: 0%;
+    background-color:#333;
+    z-index: 1;
+    margin-top: 0rem;
+    opacity: 0.6;
+}
+/* tagline f IEEE */
+header .tagline{
+    height: 80%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+    /*padding-bottom: 10%;*/
+    margin: auto;
+    font-size: 1.5rem;
+    color: #fff;
+    
+}
+header .tagline h4{
+    z-index: 2;
+}
+
+/* nav-menu */
+#menu{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    opacity: 1;
+    background:/* radial-gradient(#fff,#c4eaee)*/ #ebf8f9;
+    background-size: cover;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 2;
+    display: none;
+    color: black;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+}
+/* rotating image*/
+#rotate{
+    height:50vh ;
+    width: 50vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    
+    
+}
+#rotate #inside{
+   
+    height: 100%;
+    width: 100%;
+    animation-name: rotating;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+
+}
+
+#rotate #inside img{
+    width: 100%;
+    transition: all 0.3s ease;
+}
+/* rotating animation */
+@keyframes rotating {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+#nav-item{
+    position: relative;
+    left: 0px;
+    animation-duration: 2s;
+    font-family:'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+
+
+
+}
+#nav-item ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    margin:auto;
+    color: #004d80;
+}
+#nav-item ul li{
+    list-style: none;
+    outline: none;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    
+    
+}
+#nav-item ul li a{
+    text-decoration: none;
+    color:#004d80 ;
+}
+#nav-item ul li .fas{
+    opacity: 0;
+    margin-right: 3rem;
+    transition: all 0.4s ease;
+}
+
+
+/* responsiveness check stuff */
+@media (max-width:512px){
+    header nav .hamburger .hamburger-menu{
+        margin-right:1rem;
+    }
+    header nav .hamburger{
+        margin-right: 0.5rem;
+    }
+     
+}
+
+}
+@media(max-width: 900px){
+    #rotate{
+    height:40vh ;
+    width: 40vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    
+    
+}
+}
+
+@media(max-width: 670px){
+    /*#roatate{
+        display: none !important;
+    }
+    #rotate #inside{
+        display: none;
+
+        
+    }*/
+    #rotate{
+    height:30vh !important ;
+    width: 30vh !important;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    }
+    #rotate #inside{
+        height: 95%;
+        width: 95%;
+    }
+    #roate #img{
+        width: 98%;
+    }
+    #nav-item ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-direction: column-reverse;
+    }
+    #nav-item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10%;
+        padding-right: 10%;
+
+    }
+    #nav-item ul li{
+        font-size: 1rem;
+
+    }
+}
+/* header end (add your css below) */
