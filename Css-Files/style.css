@@ -300,17 +300,18 @@ header .tagline h4{
             /**The lines part**/
 .line{
     position: absolute;
+    top: 480px;
     left:200px;
-    top:170px;
     height:130px;
     width:3px;
     background-color: #f69e7b;
+    z-index: 2;
     
 }
 #line2{
     position:absolute;
     left:200px;
-    top:300px; 
+    top:610px; 
     height:90px;
     width:3px;
     background-color: #f69e7b;
@@ -328,10 +329,10 @@ header .tagline h4{
 
                                 /**Entire about section**/
 .about{
-    top:300px;
+    top:610px;
     position: absolute;
     width: 100vw;
-    height: 1000px;
+    height: 920px;
     background-color: #f4f4f4;
 }
 
@@ -349,6 +350,15 @@ justify-content: center;
 
 }
 .container {
+    margin-top: 20px;
+  align-items: center;
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+   
+}
+.container2 .container3 {
+    margin-top: 20px;
   align-items: center;
   display: flex;
   width: 100vw;
@@ -401,8 +411,9 @@ justify-content: center;
         flex-direction:row;
         justify-content:space-between;
         text-align: left;
-        padding: 40px;
-        padding-top: 30px;
+        padding-bottom: : 15px;
+        padding-left: 40px;
+        padding-top: 12px;
         background:  #f69e7b; 
         opacity: 0;
 }
@@ -419,7 +430,7 @@ justify-content: center;
     position: relative;
     float: left;
     font-family: "Manrope","Arial",sans-serif;
-    top:8%;
+    top:20px;
     left:40%;
     font-weight: 400;
     text-transform: uppercase;
@@ -459,7 +470,7 @@ justify-content:space-between;
   text-align: left;
   padding-left:50px;
    padding: 40px ;
-    padding-top: 50px;
+    padding-top: 30px;
      background:  #f69e7b; 
     opacity: 0;
 }
@@ -517,7 +528,7 @@ justify-content:space-between;
   text-align: left;
   padding-left:50px;
    padding: 40px ;
-    padding-top: 50px;
+    padding-top: 40px;
      background:  #f69e7b; 
     opacity: 0;
 }
@@ -527,8 +538,10 @@ justify-content:space-between;
     transition: 0.8s ;
     font-weight: 100;
     position: relative;
-    top:55px;
+    top:48px;
 }
 
 
                                   /* About section end (add your css below) */
+
+
